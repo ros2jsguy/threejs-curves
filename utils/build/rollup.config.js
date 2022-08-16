@@ -26,16 +26,16 @@ function babelCleanup() {
 
 let builds = [
 	{
-		input: 'src/index.js',
+		input: 'src/extras/index.js',
 		output: [
 			{
 				format: 'esm',
-				file: 'build/three-curves-ts.module.js'
+				file: 'build/threejs-curves.module.js'
 			}
 		]
 	},
 	{
-		input: 'src/index.js',
+		input: 'src/extras/index.js',
 		plugins: [
 			babel( {
 				babelHelpers: 'bundled',
@@ -49,7 +49,7 @@ let builds = [
 			{
 				format: 'cjs',
 				name: 'THREE',
-				file: 'build/three-curves-ts.cjs',
+				file: 'build/threejs-curves.cjs',
 				indent: '\t'
 			}
 		]

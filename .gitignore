@@ -1,12 +1,12 @@
 .idea
 .vscode
 .project
+.settings/
 
+unused
 node_modules
 
-es
-lib
-build-test
+build
 .check-type
 
 .DS_Store
