@@ -1,0 +1,8 @@
+test/
+build-test/
+.vscode
+.check-type/
+wip/
+.editorconfig
+.eslint*
+tsconfig*

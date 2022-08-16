@@ -1,0 +1,84 @@
+{
+  "name": "@ros2jsguy/three-curves-ts",
+  "version": "0.143.0",
+  "description": "Stand-alone TypeScript version of three.js curves",
+  "keywords": [
+    "spline",
+    "cubic spline",
+    "geometry"
+  ],
+  "type": "module",
+  "main": "./build/three-curve-ts.cjs",
+  "module": "./build/three-curve-ts.module.js",
+  "typings": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/three-curves-ts.module.js",
+      "require": "./build/three-curves-ts.cjs"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "es",
+    "lib"
+  ],
+  "scripts": {
+    "clean": "npx rimraf -rf es lib buld-test",
+    "build1": "tsc -p tsconfig.es.json && tsc -p tsconfig.lib.json",
+    "build1:release": "npm run clean && tsc -p tsconfig.lib.json",
+    "build1:docs": "typedoc -out ./docs --hideGenerator true --cleanOutputDir false ./src",
+    "prepare1": "npm run clean && npm run build:release && npm run build:docs",
+    "pretest1": "tsc -p tsconfig.test.json",
+    "test": "mocha build-test",
+    "build": "rollup --no-treeshake -c utils/build/rollup.config.js",
+    "build-module": "ONLY_MODULE=true rollup -c utils/build/rollup.config.js"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run check-type && lint-staged"
+    }
+  },
+  "author": {
+    "name": "ros2jsguy",
+    "email": "ros2jsguy@gmail.com",
+    "url": "https://github.com/ros2jsguy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ros2jsguy/three.curves"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/eslint-parser": "^7.18.9",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.18.9",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.7.1",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "chai": "^4.3.6",
+    "eslint": "^7.24.0",
+    "eslint-config-ali": "^12.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "mocha": "^10.0.0",
+    "rollup": "^2.77.2",
+    "rollup-plugin-filesize": "^9.1.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-visualizer": "^5.7.1",
+    "ts-node": "^10.9.1",
+    "typedoc": "^0.23.10",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@ros2jsguy/three-math-ts": "file:../three.math"
+  }
+}

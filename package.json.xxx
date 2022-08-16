@@ -1,0 +1,65 @@
+{
+  "name": "@ros2jsguy/three-curves-ts",
+  "version": "0.143.0",
+  "description": "Stand-alone TypeScript version of three.js curves",
+  "keywords": [
+    "spline",
+    "cubic spline",
+    "geometry"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "es/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "es",
+    "lib"
+  ],
+  "scripts": {
+    "clean": "npx rimraf -rf es lib buld-test",
+    "build": "tsc -p tsconfig.es.json && tsc -p tsconfig.lib.json",
+    "build:release": "npm run clean && tsc -p tsconfig.lib.json",
+    "build:docs": "typedoc -out ./docs --hideGenerator true --cleanOutputDir false ./src",
+    "prepare": "npm run clean && npm run build:release && npm run build:docs",
+    "pretest": "tsc -p tsconfig.test.json",
+    "test": "mocha build-test"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run check-type && lint-staged"
+    }
+  },
+  "author": {
+    "name": "ros2jsguy",
+    "email": "ros2jsguy@gmail.com",
+    "url": "https://github.com/ros2jsguy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ros2jsguy/three.curves"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.7.1",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "chai": "^4.3.6",
+    "eslint": "^7.24.0",
+    "eslint-config-ali": "^12.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "mocha": "^10.0.0",
+    "ts-node": "^10.9.1",
+    "typedoc": "^0.23.10",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@ros2jsguy/three-math-ts": "^0.143.0"
+  }
+}
