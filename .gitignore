@@ -6,7 +6,7 @@
 unused
 node_modules
 
-build
+build/
 .check-type
 
 .DS_Store

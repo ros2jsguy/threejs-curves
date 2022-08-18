@@ -7,7 +7,7 @@ import { Vector2 } from 'threejs-math';
  *
  * @example
  * ```
- * const curve = new THREE.EllipseCurve(
+ * const curve = new EllipseCurve(
  *   0,  0,            // ax, aY
  *   10, 10,           // xRadius, yRadius
  *   0,  2 * Math.PI,  // aStartAngle, aEndAngle

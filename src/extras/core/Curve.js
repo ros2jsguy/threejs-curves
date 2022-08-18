@@ -12,23 +12,23 @@ import { MathUtils, Vector2, Vector3, Matrix4 } from 'threejs-math';
  * .getLength()
  * .updateArcLengths()
  *
- * This following curves inherit from THREE.Curve:
+ * This following curves inherit from Curve:
  *
  * -- 2D curves --
- * THREE.ArcCurve
- * THREE.CubicBezierCurve
- * THREE.EllipseCurve
- * THREE.LineCurve
- * THREE.QuadraticBezierCurve
- * THREE.SplineCurve
+ * ArcCurve
+ * CubicBezierCurve
+ * EllipseCurve
+ * LineCurve
+ * QuadraticBezierCurve
+ * SplineCurve
  *
  * -- 3D curves --
- * THREE.CatmullRomCurve3
- * THREE.CubicBezierCurve3
- * THREE.LineCurve3
- * THREE.QuadraticBezierCurve3
+ * CatmullRomCurve3
+ * CubicBezierCurve3
+ * LineCurve3
+ * QuadraticBezierCurve3
  *
- * A series of curves can be represented as a THREE.CurvePath.
+ * A series of curves can be represented as a CurvePath.
  *
  **/
 
@@ -47,7 +47,7 @@ class Curve {
 
 	getPoint( /* t, optionalTarget */ ) {
 
-		console.warn( 'THREE.Curve: .getPoint() not implemented.' );
+		console.warn( 'Curve: .getPoint() not implemented.' );
 		return null;
 
 	}

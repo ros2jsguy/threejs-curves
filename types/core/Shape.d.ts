@@ -6,7 +6,7 @@ import { Path } from './Path';
  *
  * @example
  * ```
- * const heartShape = new THREE.Shape();
+ * const heartShape = new Shape();
  *
  * heartShape.moveTo( 25, 25 );
  * heartShape.bezierCurveTo( 25, 25, 20, 0, 0, 0 );

@@ -15,7 +15,7 @@ export class ShapePath {
 
   /**
    * Color of the shape, by default set to white (0xffffff).
-   * @defaultValue new THREE.Color()
+   * @defaultValue new Color()
    */
   color: Color;
 

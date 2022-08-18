@@ -7,7 +7,7 @@ import { CurvePath } from './CurvePath';
  *
  * @example
  * ```
- * const path = new THREE.Path();
+ * const path = new Path();
  *
  * path.lineTo( 0, 0.8 );
  * path.quadraticCurveTo( 0, 1, 0.2, 1 );
@@ -24,7 +24,7 @@ export class Path extends CurvePath<Vector2> {
 
   /**
    * The current offset of the path. Any new Curve added will start here.
-   * @defaultValue new THREE.Vector2()
+   * @defaultValue new Vector2()
    */
   currentPoint: Vector2;
 

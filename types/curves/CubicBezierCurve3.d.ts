@@ -7,11 +7,11 @@ import { Curve } from './../core/Curve';
  * 
  * @example
  * ```
- * const curve = new THREE.CubicBezierCurve3(
- *   new THREE.Vector3( -10, 0, 0 ),
- *   new THREE.Vector3( -5, 15, 0 ),
- *   new THREE.Vector3( 20, 15, 0 ),
- *   new THREE.Vector3( 10, 0, 0 )
+ * const curve = new CubicBezierCurve3(
+ *   new Vector3( -10, 0, 0 ),
+ *   new Vector3( -5, 15, 0 ),
+ *   new Vector3( 20, 15, 0 ),
+ *   new Vector3( 10, 0, 0 )
  * );
  *
  * const points = curve.getPoints( 50 );
@@ -25,25 +25,25 @@ export class CubicBezierCurve3 extends Curve<Vector3> {
 
   /**
    * The starting point.
-   * @defaultValue new THREE.Vector3()
+   * @defaultValue new Vector3()
    */
   v0: Vector3;
 
   /**
    * The first control point.
-   * @defaultValue new THREE.Vector3()
+   * @defaultValue new Vector3()
    */
   v1: Vector3;
 
   /**
    * The second control point.
-   * @defaultValue new THREE.Vector3()
+   * @defaultValue new Vector3()
    */
   v2: Vector3;
 
   /**
    * The ending point.
-   * @defaultValue new THREE.Vector3()
+   * @defaultValue new Vector3()
    */
   v3: Vector3;
 
